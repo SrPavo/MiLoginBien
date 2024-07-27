@@ -1,0 +1,49 @@
+<!-- src/app/menu/api/api.component.html -->
+
+<div class="api-container">
+  <button mat-raised-button class="back-button" (click)="goBack()">Back</button>
+  
+  <mat-form-field appearance="fill" class="search-field">
+    <mat-label>Search Character</mat-label>
+    <input matInput [(ngModel)]="searchTerm" (input)="onSearchChange()">
+  </mat-form-field>
+  <button mat-raised-button class="refresh-button" (click)="refreshCharacters()">Refresh</button>
+  <div *ngIf="characters.length">
+    <div class="character-list">
+      <mat-card *ngFor="let character of characters"
+                [ngClass]="{'edit-mode': character.editMode}"
+                class="character-item">
+        <img [src]="character.image" alt="{{ character.name }}" class="character-image">
+        <div class="character-details">
+          <mat-form-field *ngIf="character.editMode" appearance="fill" class="edit-field">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="character.name">
+          </mat-form-field>
+          <p *ngIf="!character.editMode" class="character-text">Name: {{ character.name }}</p>
+
+          <mat-form-field *ngIf="character.editMode" appearance="fill" class="edit-field">
+            <mat-label>Status</mat-label>
+            <input matInput [(ngModel)]="character.status">
+          </mat-form-field>
+          <p *ngIf="!character.editMode" class="character-text">Status: {{ character.status }}</p>
+
+          <mat-form-field *ngIf="character.editMode" appearance="fill" class="edit-field">
+            <mat-label>Species</mat-label>
+            <input matInput [(ngModel)]="character.species">
+          </mat-form-field>
+          <p *ngIf="!character.editMode" class="character-text">Species: {{ character.species }}</p>
+
+          <mat-form-field *ngIf="character.editMode" appearance="fill" class="edit-field">
+            <mat-label>Gender</mat-label>
+            <input matInput [(ngModel)]="character.gender">
+          </mat-form-field>
+          <p *ngIf="!character.editMode" class="character-text">Gender: {{ character.gender }}</p>
+
+          <button mat-mini-button class="edit-button" *ngIf="!character.editMode" (click)="editCharacter(character)">Edit</button>
+          <button mat-mini-button class="update-button" *ngIf="character.editMode" (click)="updateCharacter(character)">Update</button>
+          <button mat-mini-button class="delete-button" (click)="deleteCharacter(character.id)">Delete</button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

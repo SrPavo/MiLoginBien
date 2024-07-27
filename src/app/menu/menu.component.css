@@ -1,0 +1,70 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #3e3e3e; /* Fondo oscuro para la navbar */
+    color: #ffcc00; /* Texto amarillo en la navbar */
+    padding: 0 20px; /* Padding horizontal */
+    align-items: center; /* Alinea verticalmente el contenido */
+    height: 60px; /* Altura de la navbar */
+    display: flex; /* Usa flexbox para el diseño */
+  }
+  
+  /* Logo en la navbar */
+  .navbar-logo {
+    width: 50px; /* Tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-right: 15px; /* Espacio a la derecha del logo */
+  }
+  
+  /* Título de la navbar */
+  .navbar-title {
+    font-size: 20px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para el título */
+  }
+  
+  /* Espaciador para alinear el menú a la derecha */
+  .spacer {
+    flex: 1; /* Toma todo el espacio disponible */
+  }
+  
+  /* Menú en la navbar */
+  .navbar-menu {
+    display: flex; /* Usa flexbox para el diseño horizontal */
+  }
+  
+  /* Elementos del menú */
+  mat-list-item {
+    color: #ffcc00; /* Color del texto del menú */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 0 15px; /* Espacio entre elementos del menú */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  }
+  
+  /* Elementos del menú al pasar el cursor */
+  mat-list-item:hover {
+    background-color: #ff9900; /* Fondo amarillo al pasar el cursor */
+    color: #fff; /* Texto blanco al pasar el cursor */
+  }
+  
+  /* Contenedor del fondo del menú */
+  .menu-background {
+    background: url('https://preview.redd.it/spooky-rick-morty-wallpapers-v0-hhxsr6nw6pxb1.jpg?width=1792&format=pjpg&auto=webp&s=c9f41223dc7ffcadbe83d7ba9e34fc2b6fa3a565') no-repeat center center;
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* Asegura que el fondo cubra el resto de la vista menos la altura de la navbar */
+  }
+  
+  /* Contenido del menú */
+/* Contenedor de contenido */
+.menu-content {
+    max-width: 1200px; /* Tamaño máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    padding: 20px; /* Padding alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex; /* Usa flexbox para alinear los elementos internos */
+    flex-direction: column; /* Orienta los elementos en columna */
+    align-items: center; /* Centra los elementos en el eje transversal */
+  }
+  
+  

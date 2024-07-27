@@ -1,0 +1,85 @@
+/* Importar la fuente de cómic desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilos para el contenedor de fondo */
+.background-container {
+  position: fixed; /* Cambiado a fixed para cubrir toda la ventana */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://preview.redd.it/spooky-rick-morty-wallpapers-v0-zz7ycbnw6pxb1.jpg?width=1792&format=pjpg&auto=webp&s=9607547772d6d02c92bceeeb82d61c62238474c6') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0; /* Asegura que el fondo esté detrás del contenedor del formulario */
+}
+
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Asegura que el formulario esté en el lugar correcto */
+  z-index: 1; /* Asegura que el formulario esté encima del fondo */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; /* Asegura que el formulario esté encima del fondo */
+  z-index: 2; /* Asegura que el formulario esté encima del fondo */
+}
+
+/* Estilos para el logo */
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el card del formulario de inicio de sesión */
+.login-card {
+  padding: 20px;
+  background: rgba(139, 87, 42, 0.7); /* Fondo café crudo translúcido */
+  color: #fff; /* Texto blanco para contraste */
+  border: 2px solid #6F4F28; /* Borde marrón oscuro para el card */
+  font-family: 'Press Start 2P', cursive; /* Fuente de estilo cómic */
+}
+
+/* Estilos para el título del card */
+mat-card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos de formulario */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+  margin-top: 20px;
+}
+
+/* Estilos para el botón de inicio de sesión */
+button {
+  width: 100%;
+  background-color: #ffcc00; /* Color de fondo amarillo */
+  color: #000; /* Color del texto negro */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos para el estado hover del botón */
+button:hover {
+  background-color: #ff9900; /* Cambia el color de fondo al pasar el cursor */
+  transform: scale(1.05); /* Agranda el botón ligeramente */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra al pasar el cursor */
+}

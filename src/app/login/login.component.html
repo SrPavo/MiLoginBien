@@ -1,0 +1,30 @@
+<div class="background-container">
+  <div class="login-container" *ngIf="true" @fadeIn>
+    <div class="login-form">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a21875f1-2ef0-412b-8509-fe8928c12cec/dfdqiz6-878e728a-f93a-4664-ab31-0ceb9d70f5b2.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyMTg3NWYxLTJlZjAtNDEyYi04NTA5LWZlODkyOGMxMmNlY1wvZGZkcWl6Ni04NzhlNzI4YS1mOTNhLTQ2NjQtYWIzMS0wY2ViOWQ3MGY1YjIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6cgtV7fh8VZv640Ri9amrqUKEQ6saTENlDhR-qTW1EI" alt="Logo" class="logo">
+      <mat-card class="login-card">
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-content>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email">
+              <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
+              <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+            </mat-form-field>
+          
+            <mat-form-field appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password">
+              <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+            </mat-form-field>
+            
+            <div class="button-container">
+              <button mat-raised-button color="primary" type="submit">Login</button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

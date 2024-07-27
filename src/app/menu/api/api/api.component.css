@@ -1,0 +1,122 @@
+/* Estilos para el contenedor del API */
+.api-container {
+  padding: 20px;
+  background: url('https://wallpapers-clan.com/wp-content/uploads/2024/03/rick-and-morty-in-field-desktop-wallpaper-preview.jpg') no-repeat center center; /* Fondo con URL */
+  background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el contenedor */
+  min-height: calc(100vh - 60px); /* Asegura que el fondo cubra el resto de la vista menos la altura de la navbar */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column; /* Organiza el contenido en una columna */
+  animation: fadeInUp 0.6s ease-out; /* Añadir la animación al contenedor */
+}
+
+/* Definir la animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para el mat-card */
+.api-card {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido para el mat-card */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Padding alrededor del contenido del card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor del card */
+  max-width: 800px; /* Ancho máximo del mat-card */
+  width: 100%; /* Ancho completo del contenedor padre */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+/* Estilos para los campos de búsqueda */
+.search-field {
+  margin-bottom: 20px; /* Espacio abajo del campo de búsqueda */
+}
+
+/* Botón de refrescar */
+.refresh-button {
+  background-color: #f5a623; /* Color de fondo amarillo anaranjado */
+  color: #000; /* Color del texto negro */
+  margin-bottom: 20px; /* Espacio abajo del botón */
+}
+
+/* Estilos para el contenedor de la lista de personajes */
+.character-list {
+  display: flex; /* Usa flexbox para el diseño */
+  flex-wrap: wrap; /* Permite que los ítems se envuelvan a la siguiente línea */
+  gap: 20px; /* Espacio entre los elementos */
+  justify-content: center; /* Centra los ítems horizontalmente */
+}
+
+/* Estilos para cada personaje */
+.character-item {
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Padding alrededor del contenido del personaje */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del ítem */
+  width: 200px; /* Ancho fijo para cada ítem */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+  display: flex; /* Usa flexbox para el diseño del ítem */
+  flex-direction: column; /* Organiza el contenido en una columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto */
+}
+
+/* Imagen del personaje */
+.character-image {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Detalles del personaje */
+.character-details {
+  margin-top: 10px; /* Espacio arriba del contenedor de detalles */
+}
+
+/* Estilos para los campos de edición */
+.edit-field {
+  margin-bottom: 20px; /* Espacio abajo del campo */
+}
+
+/* Estilos para el texto de los personajes */
+.character-text {
+  font-size: 16px; /* Tamaño del texto */
+  color: #333; /* Color del texto oscuro */
+}
+
+/* Estilos para los botones de acción */
+.edit-button {
+  background-color: #007bff; /* Color de fondo azul para el botón de editar */
+  color: #fff; /* Color del texto blanco */
+  margin-right: 10px; /* Espacio a la derecha del botón */
+}
+
+.update-button {
+  background-color: #28a745; /* Color de fondo verde para el botón de actualizar */
+  color: #fff; /* Color del texto blanco */
+  margin-right: 10px; /* Espacio a la derecha del botón */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Color de fondo rojo para el botón de eliminar */
+  color: #fff; /* Color del texto blanco */
+}
+
+/* Estilo para el mat-card en modo edición */
+.edit-mode {
+  background-color: #d4edda; /* Color de fondo verde claro para el mat-card en modo edición */
+}
+
+/* Estilo para el botón de regresar al menú */
+button[mat-raised-button] {
+  margin-bottom: 20px; /* Espacio debajo del botón */
+  background-color: #007bff; /* Color de fondo azul */
+  color: #fff; /* Color del texto blanco */
+}
